@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/pager_layout"
+        android:background="@android:color/holo_green_dark"
+        android:clipChildren="true">
+
+    <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_height="250dp"
+            android:background="#d4d"
+            android:clipToPadding="false"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:clipChildren="true"/>
+
+</RelativeLayout>
+
+        <!--
+        android:clipChildren :是否限制子视图在其范围内，就是限制其子view是否可以在超出自身原本的范围绘制“突出”的部分，
+        默认值为true。（note：突出的部分是没有响应事件的）此属性一般需要在根节点设置。
+        android:clipToPadding :是否允许子view在padding的范围中绘制，默认值为true。
+        使用该属性可以响应点击事件。
+         -->
