@@ -6,7 +6,8 @@
 
     <string name="apk_auto_install">vivo自动安装apk</string>
 
-    <string name="confirm">确定</string>
-    <string name="continue_install">继续安装</string>
-    <string name="install">安装</string>
+    <string name="confirm">OK</string>
+    <string name="continue_install">Continue installation</string>
+    <string name="install">Install</string>
+
 </resources>

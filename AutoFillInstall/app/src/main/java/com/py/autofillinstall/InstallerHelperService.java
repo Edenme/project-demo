@@ -52,10 +52,10 @@ public class InstallerHelperService extends AccessibilityService {
      */
     private void findAndClickView(AccessibilityNodeInfo rootNode) {
         List<AccessibilityNodeInfo> nodeInfoList = new ArrayList<>();
-        nodeInfoList.addAll(rootNode.findAccessibilityNodeInfosByText("确定"));
-        nodeInfoList.addAll(rootNode.findAccessibilityNodeInfosByText("继续安装"));
-        nodeInfoList.addAll(rootNode.findAccessibilityNodeInfosByText("安装"));
-        nodeInfoList.addAll(rootNode.findAccessibilityNodeInfosByText("打开"));
+        nodeInfoList.addAll(rootNode.findAccessibilityNodeInfosByText(getString(R.string.confirm)));
+        nodeInfoList.addAll(rootNode.findAccessibilityNodeInfosByText(getString(R.string.continue_install)));
+        nodeInfoList.addAll(rootNode.findAccessibilityNodeInfosByText(getString(R.string.install)));
+//        nodeInfoList.addAll(rootNode.findAccessibilityNodeInfosByText("打开"));
 
         for (AccessibilityNodeInfo nodeInfo : nodeInfoList) {
             nodeInfo.performAction(AccessibilityNodeInfo.ACTION_CLICK);
