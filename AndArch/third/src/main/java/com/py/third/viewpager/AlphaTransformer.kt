@@ -1,4 +1,4 @@
-package com.py.third
+package com.py.third.viewpager
 
 import android.support.v4.view.ViewPager
 import android.view.View

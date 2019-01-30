@@ -1,4 +1,4 @@
-package com.py.third
+package com.py.third.viewpager
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -8,13 +8,14 @@ import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.RelativeLayout
+import com.py.third.R
 
 
 open class TestViewPagerActivity : AppCompatActivity() {
 
     private lateinit var mViewPager: ViewPager
     private lateinit var mAdapter: MyVpAdapter
-    private lateinit var mPageLayout:RelativeLayout
+    private lateinit var mPageLayout: RelativeLayout
 
     private val mViewPagerTest1: ViewPager by bindView<ViewPager>(R.id.viewpager)
     private val mViewPagerTest2: ViewPager by bindView(R.id.viewpager)
@@ -47,13 +48,12 @@ open class TestViewPagerActivity : AppCompatActivity() {
         })
 
 
-        mViewPager.setPageTransformer(false, AlphaTransformer())
-//        mViewPager.setPageTransformer(false, ScaleTransformer())
+//        mViewPager.setPageTransformer(false, AlphaTransformer())
+        mViewPager.setPageTransformer(false, ScaleTransformer())
     }
 
     private fun <T : View> Activity.bindView(@IdRes res: Int): Lazy<T> {
         return lazy { findViewById<T>(res) }
     }
-
 
 }
